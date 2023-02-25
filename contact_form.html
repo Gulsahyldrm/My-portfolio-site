@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form_conteiner">
+        <div class="wrapper3">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>GET IN TOUCH</h3>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="text" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone No" required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="How can I help you?"
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div></div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yildirimgulsah2323@gmail.com",
+          Password: "DF5EDE594A1AEE45E1FA38A3538E3225C9DF",
+          To: "yildirimgulsah2323@gmail.com",
+          From: "langerhanzy@gmail.com",
+          Subject: "New Contact Form Enquiry",
+          Body:
+            "Name" +
+            document.getElementById("name").value +
+            "<br> Email:" +
+            document.getElementById("email").value +
+            "<br> Phone no:" +
+            document.getElementById("phone").value +
+            "<br> Message:" +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message Sent Succesfully"));
+      }
+    </script>
+  </body>
+</html>

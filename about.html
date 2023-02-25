@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <img class="layer-1" src="images/background.png" />
+      <img class="layer-2" src="images/meteor.png" />
+      <div class="layer-3">
+        <h1>Hello</h1>
+        <p>
+            "Fairy tales don't come true, but reality can be better than fairy tales. "
+            <p> - Hans Christian Andersen - </p>
+        </p>
+      </div>
+      <img class="layer-4" src="images/4.png" />
+      <img class="layer-5" src="images/5.png" />
+      <img class="layer-6" src="images/6.png" />
+    </div>
+    <div class="content">
+      <h1>A Little Tale</h1>
+      <p>
+        Once upon a time, in the small Anatolian city of Elazig in Turkey, a
+        girl was born. Her mother named her Gülşah, which means "queen of roses"
+        in Persian. Gülşah became the second and last child of the family. She
+        also had an elder brother who was 7 years older than her. Her brother
+        was her closest friend, they played games and had fun together.
+      </p>
+      <p>
+        One day,her father said they needed to move to Izmir due to his job, and
+        they moved when she was 4 years old. Gülşah made her first friendships
+        in this city. This city taught her how to swim and ride a bicycle. For
+        her, Izmir meant friendship, the sea, and cycling. When she was about to
+        start her primary education, her family moved to Istanbul. For that
+        7-year-old girl, Istanbul was dark and crowded. Luckily, she loved
+        school, especially art, music, and literature classes. Colors and shapes
+        were special to her, and drawing was the most beautiful thing that
+        reflected her imagination. She was also interested in stories as much as
+        drawing. She wrote a story about a child who lost her mother while she
+        was still in the second grade, and the story made the whole class sad.
+        She also received full marks from the teacher. She wanted to hear her
+        drawings and writings, so she used music and started playing the bağlama
+        at the age of 9.
+      </p>
+      <p>
+        Years passed, and Gülşah added technology to her three interests. The
+        magical world of the internet led her to decide to become a web
+        developer. She thought that web pages could also be a work of art, and
+        with the support of her closest friend, her brother, she chose to study
+        computer science. University was a new universe for her.
+      </p>
+      <p>
+        New friendships gave her different perspectives, and in her first year
+        of university, she participated in many different volunteering projects.
+        She found her life purpose through these projects. She would now
+        constantly develop herself and contribute to the development of others
+      </p>
+    </div>
+    <script type="text/javascript">
+      let layer_1 = document.querySelector(".layer-1");
+      let layer_2 = document.querySelector(".layer-2");
+      let layer_3 = document.querySelector(".layer-3");
+      let layer_4 = document.querySelector(".layer-4");
+      let layer_5 = document.querySelector(".layer-5");
+      window.onscroll = function () {
+        let Y = window.scrollY;
+        layer_1.style.transform = "translateY(" + Y / 1.5 + "px)";
+        layer_2.style.transform = "translateY(" + 0 + "px)";
+        layer_3.style.transform = "translateY(" + Y / 1.5 + "px)";
+        layer_4.style.transform = "translateY(" + Y / 2 + "px)";
+        layer_5.style.transform = "translateY(" + Y / 3 + "px)";
+      };
+    </script>
+  </body>
+</html>
